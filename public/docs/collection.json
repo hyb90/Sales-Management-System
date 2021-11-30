@@ -1,0 +1,995 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "SMS.test"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "137e217f-5df4-4c1f-9586-88514cccacd8",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/sales",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/sales"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "59"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":true,\"message\":\"Sales retrieved successfully\",\"data\":{\"current_page\":1,\"data\":[{\"id\":3,\"seller_id\":1,\"client_id\":1,\"total\":292.6,\"created_at\":\"2021-11-28T22:23:52.000000Z\",\"updated_at\":\"2021-11-28T22:23:52.000000Z\",\"client\":{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},\"seller\":{\"id\":1,\"name\":\"Nour\",\"last_name\":\"Abrash\",\"mobile\":\"09876565433\",\"created_at\":\"2021-11-03T22:21:48.000000Z\",\"updated_at\":\"2021-11-06T22:21:48.000000Z\"},\"transactions\":[]},{\"id\":4,\"seller_id\":1,\"client_id\":1,\"total\":1078.8,\"created_at\":\"2021-11-28T22:35:32.000000Z\",\"updated_at\":\"2021-11-28T22:35:32.000000Z\",\"client\":{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},\"seller\":{\"id\":1,\"name\":\"Nour\",\"last_name\":\"Abrash\",\"mobile\":\"09876565433\",\"created_at\":\"2021-11-03T22:21:48.000000Z\",\"updated_at\":\"2021-11-06T22:21:48.000000Z\"},\"transactions\":[]},{\"id\":5,\"seller_id\":1,\"client_id\":1,\"total\":545,\"created_at\":\"2021-11-29T07:07:13.000000Z\",\"updated_at\":\"2021-11-29T23:06:27.000000Z\",\"client\":{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},\"seller\":{\"id\":1,\"name\":\"Nour\",\"last_name\":\"Abrash\",\"mobile\":\"09876565433\",\"created_at\":\"2021-11-03T22:21:48.000000Z\",\"updated_at\":\"2021-11-06T22:21:48.000000Z\"},\"transactions\":[{\"id\":9,\"sale_id\":5,\"product_id\":2,\"quantity\":10,\"amount\":450,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":2,\"name\":\"shirt\",\"description\":\"shirt\",\"price\":45,\"category_id\":1,\"created_at\":\"2021-11-18T11:01:45.000000Z\",\"updated_at\":\"2021-11-18T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}},{\"id\":10,\"sale_id\":5,\"product_id\":1,\"quantity\":5,\"amount\":95,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":1,\"name\":\"Ball\",\"description\":\"Ball\",\"price\":19,\"category_id\":1,\"created_at\":\"2021-11-01T11:01:45.000000Z\",\"updated_at\":\"2021-11-01T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}}]},{\"id\":6,\"seller_id\":1,\"client_id\":1,\"total\":301,\"created_at\":\"2021-11-29T17:28:44.000000Z\",\"updated_at\":\"2021-11-29T17:28:44.000000Z\",\"client\":{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},\"seller\":{\"id\":1,\"name\":\"Nour\",\"last_name\":\"Abrash\",\"mobile\":\"09876565433\",\"created_at\":\"2021-11-03T22:21:48.000000Z\",\"updated_at\":\"2021-11-06T22:21:48.000000Z\"},\"transactions\":[{\"id\":11,\"sale_id\":6,\"product_id\":1,\"quantity\":4,\"amount\":76,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":1,\"name\":\"Ball\",\"description\":\"Ball\",\"price\":19,\"category_id\":1,\"created_at\":\"2021-11-01T11:01:45.000000Z\",\"updated_at\":\"2021-11-01T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}},{\"id\":12,\"sale_id\":6,\"product_id\":2,\"quantity\":5,\"amount\":225,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":2,\"name\":\"shirt\",\"description\":\"shirt\",\"price\":45,\"category_id\":1,\"created_at\":\"2021-11-18T11:01:45.000000Z\",\"updated_at\":\"2021-11-18T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}}]},{\"id\":7,\"seller_id\":1,\"client_id\":1,\"total\":301,\"created_at\":\"2021-11-29T17:29:17.000000Z\",\"updated_at\":\"2021-11-29T17:29:17.000000Z\",\"client\":{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},\"seller\":{\"id\":1,\"name\":\"Nour\",\"last_name\":\"Abrash\",\"mobile\":\"09876565433\",\"created_at\":\"2021-11-03T22:21:48.000000Z\",\"updated_at\":\"2021-11-06T22:21:48.000000Z\"},\"transactions\":[{\"id\":13,\"sale_id\":7,\"product_id\":1,\"quantity\":4,\"amount\":76,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":1,\"name\":\"Ball\",\"description\":\"Ball\",\"price\":19,\"category_id\":1,\"created_at\":\"2021-11-01T11:01:45.000000Z\",\"updated_at\":\"2021-11-01T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}},{\"id\":14,\"sale_id\":7,\"product_id\":2,\"quantity\":5,\"amount\":225,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":2,\"name\":\"shirt\",\"description\":\"shirt\",\"price\":45,\"category_id\":1,\"created_at\":\"2021-11-18T11:01:45.000000Z\",\"updated_at\":\"2021-11-18T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}}]},{\"id\":8,\"seller_id\":1,\"client_id\":1,\"total\":301,\"created_at\":\"2021-11-29T17:29:36.000000Z\",\"updated_at\":\"2021-11-29T17:29:36.000000Z\",\"client\":{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},\"seller\":{\"id\":1,\"name\":\"Nour\",\"last_name\":\"Abrash\",\"mobile\":\"09876565433\",\"created_at\":\"2021-11-03T22:21:48.000000Z\",\"updated_at\":\"2021-11-06T22:21:48.000000Z\"},\"transactions\":[{\"id\":15,\"sale_id\":8,\"product_id\":1,\"quantity\":4,\"amount\":76,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":1,\"name\":\"Ball\",\"description\":\"Ball\",\"price\":19,\"category_id\":1,\"created_at\":\"2021-11-01T11:01:45.000000Z\",\"updated_at\":\"2021-11-01T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}},{\"id\":16,\"sale_id\":8,\"product_id\":2,\"quantity\":5,\"amount\":225,\"created_at\":null,\"updated_at\":null,\"product\":{\"id\":2,\"name\":\"shirt\",\"description\":\"shirt\",\"price\":45,\"category_id\":1,\"created_at\":\"2021-11-18T11:01:45.000000Z\",\"updated_at\":\"2021-11-18T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}}]}],\"first_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/sales?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/sales?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/sales?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/sales\",\"per_page\":10,\"prev_page_url\":null,\"to\":6,\"total\":6}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/sales",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/sales"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/sales\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/sales\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "15",
+                                    "description": "The ID of the sale."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "58"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/sales\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/sales\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "4",
+                                    "description": "The ID of the sale."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/sales\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/sales\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "13",
+                                    "description": "The ID of the sale."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/products"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "57"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":true,\"message\":\"Products retrieved successfully\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"name\":\"Ball\",\"description\":\"Ball\",\"price\":19,\"category_id\":1,\"created_at\":\"2021-11-01T11:01:45.000000Z\",\"updated_at\":\"2021-11-01T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}},{\"id\":2,\"name\":\"shirt\",\"description\":\"shirt\",\"price\":45,\"category_id\":1,\"created_at\":\"2021-11-18T11:01:45.000000Z\",\"updated_at\":\"2021-11-18T11:01:45.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}},{\"id\":3,\"name\":\"short\",\"description\":\"short\",\"price\":420,\"category_id\":1,\"created_at\":\"2021-11-29T17:33:20.000000Z\",\"updated_at\":\"2021-11-29T17:33:20.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}},{\"id\":4,\"name\":\"short2\",\"description\":\"short2\",\"price\":40,\"category_id\":1,\"created_at\":\"2021-11-29T17:35:32.000000Z\",\"updated_at\":\"2021-11-29T17:35:32.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}},{\"id\":5,\"name\":\"short4\",\"description\":\"short4\",\"price\":35,\"category_id\":1,\"created_at\":\"2021-11-29T17:37:47.000000Z\",\"updated_at\":\"2021-11-29T17:37:47.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}},{\"id\":6,\"name\":\"pants\",\"description\":\"pants\",\"price\":40,\"category_id\":1,\"created_at\":\"2021-11-29T17:49:28.000000Z\",\"updated_at\":\"2021-11-29T17:58:35.000000Z\",\"category\":{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"}}],\"first_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/products?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/products?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/products?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/products\",\"per_page\":10,\"prev_page_url\":null,\"to\":6,\"total\":6}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/products"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"category_id\":\"et\",\"name\":\"est\",\"description\":\"dolor\",\"price\":1851.6}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "3",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "16",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"price\":28050.669256}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/products\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/products\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "The ID of the product."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/clients",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/clients"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":true,\"message\":\"Clients retrieved successfully\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"name\":\"Homam\",\"last_name\":\"Bitar\",\"mobile\":\"0987655433\",\"created_at\":\"2021-11-16T22:21:08.000000Z\",\"updated_at\":\"2021-11-16T22:21:08.000000Z\"},{\"id\":2,\"name\":\"Humam\",\"last_name\":\"Bitarr\",\"mobile\":\"0993998470\",\"created_at\":\"2021-11-29T18:22:34.000000Z\",\"updated_at\":\"2021-11-29T18:24:40.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/clients?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/clients?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/clients?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/clients\",\"per_page\":10,\"prev_page_url\":null,\"to\":2,\"total\":2}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/clients",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/clients"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"neque\",\"last_name\":\"aut\",\"mobile\":\"dzo\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/clients\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/clients\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "18",
+                                    "description": "The ID of the client."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/clients\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/clients\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "The ID of the client."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"mobile\":\"qscsl\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/clients\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/clients\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "11",
+                                    "description": "The ID of the client."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/categories"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "{\"success\":true,\"message\":\"Categories retrieved successfully\",\"data\":{\"current_page\":1,\"data\":[{\"id\":1,\"name\":\"sport\",\"created_at\":\"2021-11-01T22:20:07.000000Z\",\"updated_at\":\"2021-11-01T22:20:07.000000Z\"},{\"id\":2,\"name\":\"pants\",\"created_at\":\"2021-11-30T19:44:43.000000Z\",\"updated_at\":\"2021-11-30T19:46:58.000000Z\"}],\"first_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/categories?page=1\",\"from\":1,\"last_page\":1,\"last_page_url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/categories?page=1\",\"links\":[{\"url\":null,\"label\":\"&laquo; Previous\",\"active\":false},{\"url\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/categories?page=1\",\"label\":\"1\",\"active\":true},{\"url\":null,\"label\":\"Next &raquo;\",\"active\":false}],\"next_page_url\":null,\"path\":\"http:\\\/\\\/sms.test\\\/api\\\/v1\\\/categories\",\"per_page\":10,\"prev_page_url\":null,\"to\":2,\"total\":2}}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/categories"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"itaque\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "2",
+                                    "description": "The ID of the category."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "content-type",
+                                    "value": "text\/html; charset=UTF-8"
+                                },
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 200,
+                            "body": "",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the category."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "[]"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categories\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/v1\/categories\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "7",
+                                    "description": "The ID of the category."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

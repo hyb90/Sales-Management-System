@@ -1,0 +1,1761 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://SMS.test'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/v1/sales:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Sales retrieved successfully'
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 3
+                        seller_id: 1
+                        client_id: 1
+                        total: 292.6
+                        created_at: '2021-11-28T22:23:52.000000Z'
+                        updated_at: '2021-11-28T22:23:52.000000Z'
+                        client:
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        seller:
+                          id: 1
+                          name: Nour
+                          last_name: Abrash
+                          mobile: '09876565433'
+                          created_at: '2021-11-03T22:21:48.000000Z'
+                          updated_at: '2021-11-06T22:21:48.000000Z'
+                        transactions: []
+                      -
+                        id: 4
+                        seller_id: 1
+                        client_id: 1
+                        total: 1078.8
+                        created_at: '2021-11-28T22:35:32.000000Z'
+                        updated_at: '2021-11-28T22:35:32.000000Z'
+                        client:
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        seller:
+                          id: 1
+                          name: Nour
+                          last_name: Abrash
+                          mobile: '09876565433'
+                          created_at: '2021-11-03T22:21:48.000000Z'
+                          updated_at: '2021-11-06T22:21:48.000000Z'
+                        transactions: []
+                      -
+                        id: 5
+                        seller_id: 1
+                        client_id: 1
+                        total: 545
+                        created_at: '2021-11-29T07:07:13.000000Z'
+                        updated_at: '2021-11-29T23:06:27.000000Z'
+                        client:
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        seller:
+                          id: 1
+                          name: Nour
+                          last_name: Abrash
+                          mobile: '09876565433'
+                          created_at: '2021-11-03T22:21:48.000000Z'
+                          updated_at: '2021-11-06T22:21:48.000000Z'
+                        transactions:
+                          -
+                            id: 9
+                            sale_id: 5
+                            product_id: 2
+                            quantity: 10
+                            amount: 450
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 2
+                              name: shirt
+                              description: shirt
+                              price: 45
+                              category_id: 1
+                              created_at: '2021-11-18T11:01:45.000000Z'
+                              updated_at: '2021-11-18T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                          -
+                            id: 10
+                            sale_id: 5
+                            product_id: 1
+                            quantity: 5
+                            amount: 95
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 1
+                              name: Ball
+                              description: Ball
+                              price: 19
+                              category_id: 1
+                              created_at: '2021-11-01T11:01:45.000000Z'
+                              updated_at: '2021-11-01T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 6
+                        seller_id: 1
+                        client_id: 1
+                        total: 301
+                        created_at: '2021-11-29T17:28:44.000000Z'
+                        updated_at: '2021-11-29T17:28:44.000000Z'
+                        client:
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        seller:
+                          id: 1
+                          name: Nour
+                          last_name: Abrash
+                          mobile: '09876565433'
+                          created_at: '2021-11-03T22:21:48.000000Z'
+                          updated_at: '2021-11-06T22:21:48.000000Z'
+                        transactions:
+                          -
+                            id: 11
+                            sale_id: 6
+                            product_id: 1
+                            quantity: 4
+                            amount: 76
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 1
+                              name: Ball
+                              description: Ball
+                              price: 19
+                              category_id: 1
+                              created_at: '2021-11-01T11:01:45.000000Z'
+                              updated_at: '2021-11-01T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                          -
+                            id: 12
+                            sale_id: 6
+                            product_id: 2
+                            quantity: 5
+                            amount: 225
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 2
+                              name: shirt
+                              description: shirt
+                              price: 45
+                              category_id: 1
+                              created_at: '2021-11-18T11:01:45.000000Z'
+                              updated_at: '2021-11-18T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 7
+                        seller_id: 1
+                        client_id: 1
+                        total: 301
+                        created_at: '2021-11-29T17:29:17.000000Z'
+                        updated_at: '2021-11-29T17:29:17.000000Z'
+                        client:
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        seller:
+                          id: 1
+                          name: Nour
+                          last_name: Abrash
+                          mobile: '09876565433'
+                          created_at: '2021-11-03T22:21:48.000000Z'
+                          updated_at: '2021-11-06T22:21:48.000000Z'
+                        transactions:
+                          -
+                            id: 13
+                            sale_id: 7
+                            product_id: 1
+                            quantity: 4
+                            amount: 76
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 1
+                              name: Ball
+                              description: Ball
+                              price: 19
+                              category_id: 1
+                              created_at: '2021-11-01T11:01:45.000000Z'
+                              updated_at: '2021-11-01T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                          -
+                            id: 14
+                            sale_id: 7
+                            product_id: 2
+                            quantity: 5
+                            amount: 225
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 2
+                              name: shirt
+                              description: shirt
+                              price: 45
+                              category_id: 1
+                              created_at: '2021-11-18T11:01:45.000000Z'
+                              updated_at: '2021-11-18T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 8
+                        seller_id: 1
+                        client_id: 1
+                        total: 301
+                        created_at: '2021-11-29T17:29:36.000000Z'
+                        updated_at: '2021-11-29T17:29:36.000000Z'
+                        client:
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        seller:
+                          id: 1
+                          name: Nour
+                          last_name: Abrash
+                          mobile: '09876565433'
+                          created_at: '2021-11-03T22:21:48.000000Z'
+                          updated_at: '2021-11-06T22:21:48.000000Z'
+                        transactions:
+                          -
+                            id: 15
+                            sale_id: 8
+                            product_id: 1
+                            quantity: 4
+                            amount: 76
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 1
+                              name: Ball
+                              description: Ball
+                              price: 19
+                              category_id: 1
+                              created_at: '2021-11-01T11:01:45.000000Z'
+                              updated_at: '2021-11-01T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                          -
+                            id: 16
+                            sale_id: 8
+                            product_id: 2
+                            quantity: 5
+                            amount: 225
+                            created_at: null
+                            updated_at: null
+                            product:
+                              id: 2
+                              name: shirt
+                              description: shirt
+                              price: 45
+                              category_id: 1
+                              created_at: '2021-11-18T11:01:45.000000Z'
+                              updated_at: '2021-11-18T11:01:45.000000Z'
+                              category:
+                                id: 1
+                                name: sport
+                                created_at: '2021-11-01T22:20:07.000000Z'
+                                updated_at: '2021-11-01T22:20:07.000000Z'
+                    first_page_url: 'http://sms.test/api/v1/sales?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://sms.test/api/v1/sales?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://sms.test/api/v1/sales?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://sms.test/api/v1/sales'
+                    per_page: 10
+                    prev_page_url: null
+                    to: 6
+                    total: 6
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Sales retrieved successfully'
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 3
+                          seller_id: 1
+                          client_id: 1
+                          total: 292.6
+                          created_at: '2021-11-28T22:23:52.000000Z'
+                          updated_at: '2021-11-28T22:23:52.000000Z'
+                          client:
+                            id: 1
+                            name: Homam
+                            last_name: Bitar
+                            mobile: '0987655433'
+                            created_at: '2021-11-16T22:21:08.000000Z'
+                            updated_at: '2021-11-16T22:21:08.000000Z'
+                          seller:
+                            id: 1
+                            name: Nour
+                            last_name: Abrash
+                            mobile: '09876565433'
+                            created_at: '2021-11-03T22:21:48.000000Z'
+                            updated_at: '2021-11-06T22:21:48.000000Z'
+                          transactions: []
+                        -
+                          id: 4
+                          seller_id: 1
+                          client_id: 1
+                          total: 1078.8
+                          created_at: '2021-11-28T22:35:32.000000Z'
+                          updated_at: '2021-11-28T22:35:32.000000Z'
+                          client:
+                            id: 1
+                            name: Homam
+                            last_name: Bitar
+                            mobile: '0987655433'
+                            created_at: '2021-11-16T22:21:08.000000Z'
+                            updated_at: '2021-11-16T22:21:08.000000Z'
+                          seller:
+                            id: 1
+                            name: Nour
+                            last_name: Abrash
+                            mobile: '09876565433'
+                            created_at: '2021-11-03T22:21:48.000000Z'
+                            updated_at: '2021-11-06T22:21:48.000000Z'
+                          transactions: []
+                        -
+                          id: 5
+                          seller_id: 1
+                          client_id: 1
+                          total: 545
+                          created_at: '2021-11-29T07:07:13.000000Z'
+                          updated_at: '2021-11-29T23:06:27.000000Z'
+                          client:
+                            id: 1
+                            name: Homam
+                            last_name: Bitar
+                            mobile: '0987655433'
+                            created_at: '2021-11-16T22:21:08.000000Z'
+                            updated_at: '2021-11-16T22:21:08.000000Z'
+                          seller:
+                            id: 1
+                            name: Nour
+                            last_name: Abrash
+                            mobile: '09876565433'
+                            created_at: '2021-11-03T22:21:48.000000Z'
+                            updated_at: '2021-11-06T22:21:48.000000Z'
+                          transactions:
+                            -
+                              id: 9
+                              sale_id: 5
+                              product_id: 2
+                              quantity: 10
+                              amount: 450
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 2
+                                name: shirt
+                                description: shirt
+                                price: 45
+                                category_id: 1
+                                created_at: '2021-11-18T11:01:45.000000Z'
+                                updated_at: '2021-11-18T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                            -
+                              id: 10
+                              sale_id: 5
+                              product_id: 1
+                              quantity: 5
+                              amount: 95
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 1
+                                name: Ball
+                                description: Ball
+                                price: 19
+                                category_id: 1
+                                created_at: '2021-11-01T11:01:45.000000Z'
+                                updated_at: '2021-11-01T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 6
+                          seller_id: 1
+                          client_id: 1
+                          total: 301
+                          created_at: '2021-11-29T17:28:44.000000Z'
+                          updated_at: '2021-11-29T17:28:44.000000Z'
+                          client:
+                            id: 1
+                            name: Homam
+                            last_name: Bitar
+                            mobile: '0987655433'
+                            created_at: '2021-11-16T22:21:08.000000Z'
+                            updated_at: '2021-11-16T22:21:08.000000Z'
+                          seller:
+                            id: 1
+                            name: Nour
+                            last_name: Abrash
+                            mobile: '09876565433'
+                            created_at: '2021-11-03T22:21:48.000000Z'
+                            updated_at: '2021-11-06T22:21:48.000000Z'
+                          transactions:
+                            -
+                              id: 11
+                              sale_id: 6
+                              product_id: 1
+                              quantity: 4
+                              amount: 76
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 1
+                                name: Ball
+                                description: Ball
+                                price: 19
+                                category_id: 1
+                                created_at: '2021-11-01T11:01:45.000000Z'
+                                updated_at: '2021-11-01T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                            -
+                              id: 12
+                              sale_id: 6
+                              product_id: 2
+                              quantity: 5
+                              amount: 225
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 2
+                                name: shirt
+                                description: shirt
+                                price: 45
+                                category_id: 1
+                                created_at: '2021-11-18T11:01:45.000000Z'
+                                updated_at: '2021-11-18T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 7
+                          seller_id: 1
+                          client_id: 1
+                          total: 301
+                          created_at: '2021-11-29T17:29:17.000000Z'
+                          updated_at: '2021-11-29T17:29:17.000000Z'
+                          client:
+                            id: 1
+                            name: Homam
+                            last_name: Bitar
+                            mobile: '0987655433'
+                            created_at: '2021-11-16T22:21:08.000000Z'
+                            updated_at: '2021-11-16T22:21:08.000000Z'
+                          seller:
+                            id: 1
+                            name: Nour
+                            last_name: Abrash
+                            mobile: '09876565433'
+                            created_at: '2021-11-03T22:21:48.000000Z'
+                            updated_at: '2021-11-06T22:21:48.000000Z'
+                          transactions:
+                            -
+                              id: 13
+                              sale_id: 7
+                              product_id: 1
+                              quantity: 4
+                              amount: 76
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 1
+                                name: Ball
+                                description: Ball
+                                price: 19
+                                category_id: 1
+                                created_at: '2021-11-01T11:01:45.000000Z'
+                                updated_at: '2021-11-01T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                            -
+                              id: 14
+                              sale_id: 7
+                              product_id: 2
+                              quantity: 5
+                              amount: 225
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 2
+                                name: shirt
+                                description: shirt
+                                price: 45
+                                category_id: 1
+                                created_at: '2021-11-18T11:01:45.000000Z'
+                                updated_at: '2021-11-18T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 8
+                          seller_id: 1
+                          client_id: 1
+                          total: 301
+                          created_at: '2021-11-29T17:29:36.000000Z'
+                          updated_at: '2021-11-29T17:29:36.000000Z'
+                          client:
+                            id: 1
+                            name: Homam
+                            last_name: Bitar
+                            mobile: '0987655433'
+                            created_at: '2021-11-16T22:21:08.000000Z'
+                            updated_at: '2021-11-16T22:21:08.000000Z'
+                          seller:
+                            id: 1
+                            name: Nour
+                            last_name: Abrash
+                            mobile: '09876565433'
+                            created_at: '2021-11-03T22:21:48.000000Z'
+                            updated_at: '2021-11-06T22:21:48.000000Z'
+                          transactions:
+                            -
+                              id: 15
+                              sale_id: 8
+                              product_id: 1
+                              quantity: 4
+                              amount: 76
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 1
+                                name: Ball
+                                description: Ball
+                                price: 19
+                                category_id: 1
+                                created_at: '2021-11-01T11:01:45.000000Z'
+                                updated_at: '2021-11-01T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                            -
+                              id: 16
+                              sale_id: 8
+                              product_id: 2
+                              quantity: 5
+                              amount: 225
+                              created_at: null
+                              updated_at: null
+                              product:
+                                id: 2
+                                name: shirt
+                                description: shirt
+                                price: 45
+                                category_id: 1
+                                created_at: '2021-11-18T11:01:45.000000Z'
+                                updated_at: '2021-11-18T11:01:45.000000Z'
+                                category:
+                                  id: 1
+                                  name: sport
+                                  created_at: '2021-11-01T22:20:07.000000Z'
+                                  updated_at: '2021-11-01T22:20:07.000000Z'
+                      first_page_url: 'http://sms.test/api/v1/sales?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://sms.test/api/v1/sales?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://sms.test/api/v1/sales?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://sms.test/api/v1/sales'
+                      per_page: 10
+                      prev_page_url: null
+                      to: 6
+                      total: 6
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/v1/sales/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the sale.'
+        example: 15
+        required: true
+        schema:
+          type: integer
+  /api/v1/products:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Products retrieved successfully'
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        name: Ball
+                        description: Ball
+                        price: 19
+                        category_id: 1
+                        created_at: '2021-11-01T11:01:45.000000Z'
+                        updated_at: '2021-11-01T11:01:45.000000Z'
+                        category:
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 2
+                        name: shirt
+                        description: shirt
+                        price: 45
+                        category_id: 1
+                        created_at: '2021-11-18T11:01:45.000000Z'
+                        updated_at: '2021-11-18T11:01:45.000000Z'
+                        category:
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 3
+                        name: short
+                        description: short
+                        price: 420
+                        category_id: 1
+                        created_at: '2021-11-29T17:33:20.000000Z'
+                        updated_at: '2021-11-29T17:33:20.000000Z'
+                        category:
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 4
+                        name: short2
+                        description: short2
+                        price: 40
+                        category_id: 1
+                        created_at: '2021-11-29T17:35:32.000000Z'
+                        updated_at: '2021-11-29T17:35:32.000000Z'
+                        category:
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 5
+                        name: short4
+                        description: short4
+                        price: 35
+                        category_id: 1
+                        created_at: '2021-11-29T17:37:47.000000Z'
+                        updated_at: '2021-11-29T17:37:47.000000Z'
+                        category:
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 6
+                        name: pants
+                        description: pants
+                        price: 40
+                        category_id: 1
+                        created_at: '2021-11-29T17:49:28.000000Z'
+                        updated_at: '2021-11-29T17:58:35.000000Z'
+                        category:
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                    first_page_url: 'http://sms.test/api/v1/products?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://sms.test/api/v1/products?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://sms.test/api/v1/products?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://sms.test/api/v1/products'
+                    per_page: 10
+                    prev_page_url: null
+                    to: 6
+                    total: 6
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Products retrieved successfully'
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 1
+                          name: Ball
+                          description: Ball
+                          price: 19
+                          category_id: 1
+                          created_at: '2021-11-01T11:01:45.000000Z'
+                          updated_at: '2021-11-01T11:01:45.000000Z'
+                          category:
+                            id: 1
+                            name: sport
+                            created_at: '2021-11-01T22:20:07.000000Z'
+                            updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 2
+                          name: shirt
+                          description: shirt
+                          price: 45
+                          category_id: 1
+                          created_at: '2021-11-18T11:01:45.000000Z'
+                          updated_at: '2021-11-18T11:01:45.000000Z'
+                          category:
+                            id: 1
+                            name: sport
+                            created_at: '2021-11-01T22:20:07.000000Z'
+                            updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 3
+                          name: short
+                          description: short
+                          price: 420
+                          category_id: 1
+                          created_at: '2021-11-29T17:33:20.000000Z'
+                          updated_at: '2021-11-29T17:33:20.000000Z'
+                          category:
+                            id: 1
+                            name: sport
+                            created_at: '2021-11-01T22:20:07.000000Z'
+                            updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 4
+                          name: short2
+                          description: short2
+                          price: 40
+                          category_id: 1
+                          created_at: '2021-11-29T17:35:32.000000Z'
+                          updated_at: '2021-11-29T17:35:32.000000Z'
+                          category:
+                            id: 1
+                            name: sport
+                            created_at: '2021-11-01T22:20:07.000000Z'
+                            updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 5
+                          name: short4
+                          description: short4
+                          price: 35
+                          category_id: 1
+                          created_at: '2021-11-29T17:37:47.000000Z'
+                          updated_at: '2021-11-29T17:37:47.000000Z'
+                          category:
+                            id: 1
+                            name: sport
+                            created_at: '2021-11-01T22:20:07.000000Z'
+                            updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 6
+                          name: pants
+                          description: pants
+                          price: 40
+                          category_id: 1
+                          created_at: '2021-11-29T17:49:28.000000Z'
+                          updated_at: '2021-11-29T17:58:35.000000Z'
+                          category:
+                            id: 1
+                            name: sport
+                            created_at: '2021-11-01T22:20:07.000000Z'
+                            updated_at: '2021-11-01T22:20:07.000000Z'
+                      first_page_url: 'http://sms.test/api/v1/products?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://sms.test/api/v1/products?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://sms.test/api/v1/products?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://sms.test/api/v1/products'
+                      per_page: 10
+                      prev_page_url: null
+                      to: 6
+                      total: 6
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                category_id:
+                  type: string
+                  description: ''
+                  example: et
+                name:
+                  type: string
+                  description: ''
+                  example: est
+                description:
+                  type: string
+                  description: ''
+                  example: dolor
+                price:
+                  type: number
+                  description: ''
+                  example: 1851.6
+              required:
+                - category_id
+                - name
+                - description
+                - price
+      security: []
+  '/api/v1/products/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                category_id:
+                  type: string
+                  description: ''
+                  example: null
+                name:
+                  type: string
+                  description: ''
+                  example: null
+                description:
+                  type: string
+                  description: ''
+                  example: null
+                price:
+                  type: number
+                  description: ''
+                  example: 28050.669256
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 3
+        required: true
+        schema:
+          type: integer
+  /api/v1/clients:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Clients retrieved successfully'
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        name: Homam
+                        last_name: Bitar
+                        mobile: '0987655433'
+                        created_at: '2021-11-16T22:21:08.000000Z'
+                        updated_at: '2021-11-16T22:21:08.000000Z'
+                      -
+                        id: 2
+                        name: Humam
+                        last_name: Bitarr
+                        mobile: '0993998470'
+                        created_at: '2021-11-29T18:22:34.000000Z'
+                        updated_at: '2021-11-29T18:24:40.000000Z'
+                    first_page_url: 'http://sms.test/api/v1/clients?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://sms.test/api/v1/clients?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://sms.test/api/v1/clients?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://sms.test/api/v1/clients'
+                    per_page: 10
+                    prev_page_url: null
+                    to: 2
+                    total: 2
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Clients retrieved successfully'
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 1
+                          name: Homam
+                          last_name: Bitar
+                          mobile: '0987655433'
+                          created_at: '2021-11-16T22:21:08.000000Z'
+                          updated_at: '2021-11-16T22:21:08.000000Z'
+                        -
+                          id: 2
+                          name: Humam
+                          last_name: Bitarr
+                          mobile: '0993998470'
+                          created_at: '2021-11-29T18:22:34.000000Z'
+                          updated_at: '2021-11-29T18:24:40.000000Z'
+                      first_page_url: 'http://sms.test/api/v1/clients?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://sms.test/api/v1/clients?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://sms.test/api/v1/clients?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://sms.test/api/v1/clients'
+                      per_page: 10
+                      prev_page_url: null
+                      to: 2
+                      total: 2
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: neque
+                last_name:
+                  type: string
+                  description: ''
+                  example: aut
+                mobile:
+                  type: string
+                  description: 'The value format is invalid. Must be at least 10 characters.'
+                  example: dzo
+              required:
+                - name
+                - last_name
+                - mobile
+      security: []
+  '/api/v1/clients/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: null
+                last_name:
+                  type: string
+                  description: ''
+                  example: null
+                mobile:
+                  type: string
+                  description: 'The value format is invalid. Must be at least 10 characters.'
+                  example: qscsl
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the client.'
+        example: 18
+        required: true
+        schema:
+          type: integer
+  /api/v1/categories:
+    get:
+      summary: 'Display a listing of the resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  success: true
+                  message: 'Categories retrieved successfully'
+                  data:
+                    current_page: 1
+                    data:
+                      -
+                        id: 1
+                        name: sport
+                        created_at: '2021-11-01T22:20:07.000000Z'
+                        updated_at: '2021-11-01T22:20:07.000000Z'
+                      -
+                        id: 2
+                        name: pants
+                        created_at: '2021-11-30T19:44:43.000000Z'
+                        updated_at: '2021-11-30T19:46:58.000000Z'
+                    first_page_url: 'http://sms.test/api/v1/categories?page=1'
+                    from: 1
+                    last_page: 1
+                    last_page_url: 'http://sms.test/api/v1/categories?page=1'
+                    links:
+                      -
+                        url: null
+                        label: '&laquo; Previous'
+                        active: false
+                      -
+                        url: 'http://sms.test/api/v1/categories?page=1'
+                        label: '1'
+                        active: true
+                      -
+                        url: null
+                        label: 'Next &raquo;'
+                        active: false
+                    next_page_url: null
+                    path: 'http://sms.test/api/v1/categories'
+                    per_page: 10
+                    prev_page_url: null
+                    to: 2
+                    total: 2
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: 'Categories retrieved successfully'
+                  data:
+                    type: object
+                    example:
+                      current_page: 1
+                      data:
+                        -
+                          id: 1
+                          name: sport
+                          created_at: '2021-11-01T22:20:07.000000Z'
+                          updated_at: '2021-11-01T22:20:07.000000Z'
+                        -
+                          id: 2
+                          name: pants
+                          created_at: '2021-11-30T19:44:43.000000Z'
+                          updated_at: '2021-11-30T19:46:58.000000Z'
+                      first_page_url: 'http://sms.test/api/v1/categories?page=1'
+                      from: 1
+                      last_page: 1
+                      last_page_url: 'http://sms.test/api/v1/categories?page=1'
+                      links:
+                        -
+                          url: null
+                          label: '&laquo; Previous'
+                          active: false
+                        -
+                          url: 'http://sms.test/api/v1/categories?page=1'
+                          label: '1'
+                          active: true
+                        -
+                          url: null
+                          label: 'Next &raquo;'
+                          active: false
+                      next_page_url: null
+                      path: 'http://sms.test/api/v1/categories'
+                      per_page: 10
+                      prev_page_url: null
+                      to: 2
+                      total: 2
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Store a newly created resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: itaque
+              required:
+                - name
+      security: []
+  '/api/v1/categories/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ''
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update the specified resource in storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 2
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: Endpoints
+    description: ''
